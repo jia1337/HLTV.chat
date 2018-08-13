@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icons/icon-128.png",
+      "default_title": "HLTVChat"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.js", "content.js" ],
+      "matches": [ "https://www.hltv.org/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ortc-developers.realtime.co; object-src 'self'",
+   "description": "HLTVChat",
+   "icons": {
+      "128": "icons/icon-128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtOwCCm4Ohvx3uOd9fHNYo0GRO+JxIrOvihm8WWO4B4MEHXsf6WkrgBcgS/fcaKmQqA0NglZoIaNEtJHkGVDYSYxOjO5SQEXWsuWmlYi/C50SGOhpOSAAdVZO/VWfqc2xwvUaJtVKEuuw+MHb20OzCQqSmY5Iftt2+FcCTJkSSdnjhF+ldjMPacHnJsuH44xP7GaVxGONu8sOEb8NXYrbGfPX4MfK+B8Tot3NKko419Vk95HgsEl3MXPnxdnjnF3ofaItfJGmds8AgoTYE+dvb18VD8DiphuVivyy2JCs2U8T+bT6W2hFDbgoiM6k9vieZf8U8c8QUZQ/oWR2d/VHeQIDAQAB",
+   "manifest_version": 2,
+   "name": "HLTVChat",
+   "permissions": [ "https://www.hltv.org/*", "https://hltv.pro/*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.8",
+   "web_accessible_resources": [ "themes/*", "ui/*", "js/*" ]
+}

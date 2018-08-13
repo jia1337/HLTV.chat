@@ -1,0 +1,81 @@
+.pro-chat{
+  padding: 0 14px;
+  position:relative;
+
+  width: 60px;
+  box-sizing: border-box;
+  /* text-indent: -99999px; */
+  overflow: visible;
+}
+.pro-chat i{
+  background: url(chrome-extension://__MSG_@@extension_id__/ui/images/chat-bubble.png) center center no-repeat;
+  position: absolute;
+  top: 5px;
+  width: 22px;
+  height: 18px;
+  right: -7px;
+  z-index: 9999999999999999;
+  display: block;
+  background-size: 100%;
+}
+
+#proChatFrame{
+  width:100%;
+  height:600px;
+  border:0;
+}
+
+#proOverlay{
+  position:fixed;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:#fff;
+  z-index:999999;
+  display:none
+}
+#proGmCBtns{
+  height:30px;
+}
+
+#proGameInfo h1{
+  position: initial;
+  font-size: 80px;
+}
+.pro-game-list{
+  width:500px;
+  margin: 15px auto;
+  counter-reset: li;
+  list-style: none;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 4em;
+}
+.pro-game-list a{
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: #5975D9;
+color: white;
+text-decoration: none;
+box-shadow:inset 0.5em 0 black;
+-webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
+transition: box-shadow 0.5s;
+}
+
+.pro-game-list a:hover{
+  box-shadow:inset 2em 0 black;
+  color:#fff !important
+}
+
+.pro-gc{
+  overflow:hidden
+}
+
+.pro-gc #proChatFrame{
+  position:fixed;
+  right:0; top:0;
+  width:500px; height:100%;
+  z-index:99999999;
+}
+.pro-gc #proOverlay{display:block}
